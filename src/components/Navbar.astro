@@ -1,0 +1,44 @@
+---
+import Logo from "../assets/logos/logo.svg?raw";
+import Menu from "../assets/icons/menu.svg?raw";
+---
+<header  class="w-full fixed inset-x-0 top-0 text-white z-10">
+	<nav class="w-full flex items-center justify-between gap-8 outer py-3 px-9">
+		<!-- Mobile Menu -->
+		<div class="xl:hidden xl:invisible shrink-0">
+			<button class="cursor-pointer">
+				<Fragment set:html={Menu} />
+				<span class="sr-only">Open Menu</span>
+			</button>
+		</div>
+		<!-- Navigation Links -->
+		<div class="flex-1 max-xl:hidden max-xl:invisible">
+			<div
+				class="flex items-baseline gap-x-10 uppercase font-semibold copy-sm"
+			>
+				<a href="./">Shop</a>
+				<a href="./">about</a>
+				<a href="./">our farmers</a>
+				<a href="./">ingredients</a>
+			</div>
+		</div>
+		<!-- Logo -->
+		<div class="">
+			<a href="./" class="inline-block">
+				<Fragment set:html={Logo} />
+				<span class="sr-only">Go to Skin B Home</span>
+			</a>
+		</div>
+		<!-- CTA -->
+		<div
+			class="flex-1 flex justify-end items-baseline max-xl:hidden max-xl:invisible"
+		>
+			<div
+				class="flex items-baseline gap-x-10 uppercase font-semibold copy-sm"
+			>
+				<a href="./">Account</a>
+				<a href="./">Cart (0)</a>
+			</div>
+		</div>
+	</nav>
+</header>

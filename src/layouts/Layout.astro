@@ -1,5 +1,7 @@
 ---
-import "../styles/global.css";
+import "../styles/site.css";
+
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -9,9 +11,12 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>SKIN</title>
+		<title>SKIN B</title>
 	</head>
-	<body class="bg-beige text-green font-body">
-		<slot />
+	<body class="bg-beige text-green font-red-hat">
+		<Navbar  />
+		<main class="w-full">
+			<slot />
+		</main>
 	</body>
 </html>

@@ -1,0 +1,13 @@
+/* @layer components { 
+    .btn {
+       @apply text-25 leading-none pb-2 inline-block font-normal italic font-nantes relative hover:before:scale-x-100 hover:after:scale-x-0 hover:before:delay-300;
+    }
+ 
+    .btn::before {
+       @apply content-[''] absolute block bottom-0 inset-x-0 h-px w-full scale-x-0 bg-current origin-left transition-transform duration-500;
+    }
+ 
+    .btn::after {
+       @apply content-[''] absolute block bottom-0 inset-x-0 h-px w-full bg-current origin-right transition-transform duration-500;
+    }
+ } */

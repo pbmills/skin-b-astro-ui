@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+import Banner from "../assets/images/banner.png";
+---
+
+<section class="w-full text-white">
+	<div class="outer relative z-0">
+		<div class="absolute inset-0 w-full h-full pointer-events-none">
+			<Image
+				class="w-full h-full object-cover object-center"
+				src={Banner}
+				alt="Women's Faces"
+				loading={"eager"}
+			/>
+		</div>
+		<div
+			class="min-h-screen w-full relative z-0 flex flex-col items-center justify-center"
+		>
+			<h1 class="heading-1 uppercase font-medium">
+				<span>Be the</span>
+				<span class="font-nantes font-normal italic">energy</span>
+			</h1>
+			<h1 class="heading-1 uppercase font-medium">
+				<span>you want to</span>
+				<span class="font-nantes font-normal italic">attract</span>
+			</h1>
+			<div class="absolute bottom-10 inset-x-0 flex justify-center">
+				<a href="./" class="btn">Shop the range</a>
+			</div>
+		</div>
+	</div>
+</section>

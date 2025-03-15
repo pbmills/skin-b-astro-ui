@@ -1,0 +1,61 @@
+@font-face {
+   font-family: 'Nates';
+   src: url('/fonts/NantesWeb-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Nates';
+   src: url('/fonts/NantesWeb-RegularItalic.woff2') format('woff2');
+   font-weight: 400;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Nates';
+   src: url('/fonts/NantesWeb-BoldItalic.woff2') format('woff2');
+   font-weight: 700;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Display';
+   src: url('/fonts/RedHatDisplay-Regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Display';
+   src: url('/fonts/RedHatDisplay-Medium.woff') format('woff');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Display';
+   src: url('/fonts/RedHatDisplay-SemiBold.woff') format('woff');
+   font-weight: 600;
+   font-style: italic;
+   font-display: swap;
+}
+
+@layer components {
+   .copy-sm {
+      @apply text-sm leading-none tracking-[0.05em];
+   }
+
+   .copy-xl {
+      @apply text-xl xl:text-25 leading-[1.4] tracking-[0.01em];
+   }
+
+   .heading-1 {
+      @apply text-3xl md:text-5xl xl:text-[3.5rem] xl:leading-[1.2];
+   }
+}
