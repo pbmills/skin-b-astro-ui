@@ -1,7 +1,8 @@
 ---
-import "../styles/site.css";
+import "../styles/global.css";
 
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -14,9 +15,10 @@ import Navbar from "../components/Navbar.astro";
 		<title>SKIN B</title>
 	</head>
 	<body class="bg-beige text-green font-red-hat">
-		<Navbar  />
+		<Navbar />
 		<main class="w-full">
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>

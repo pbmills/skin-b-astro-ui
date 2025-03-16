@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.3",
+    "@astrojs/vercel": "^8.1.2",
     "@tailwindcss/vite": "^4.0.14",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.9",
     "astro": "^5.5.2",
+    "gsap": "^3.12.7",
     "tailwindcss": "^4.0.14"
   }
 }

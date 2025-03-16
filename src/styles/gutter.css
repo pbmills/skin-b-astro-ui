@@ -1,0 +1,5 @@
+@layer components {
+   .outer {
+      @apply max-w-[90rem] mx-auto w-full;
+   }
+}

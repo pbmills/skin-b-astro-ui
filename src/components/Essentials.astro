@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+
+import Cream from "../assets/images/cream.png";
+import Freckles from "../assets/images/freckles.png";
+import ProductCleanser from "../assets/images/product-cleanser.png";
+import ProductMask from "../assets/images/product-mask.png";
+
+const cards = [
+	{
+		title: `goat glow milk`,
+		desc: `Gently cleanses oil`,
+		price: 60,
+		image: Freckles,
+		product: ProductCleanser,
+	},
+	{
+		title: `royal raw honey elixir`,
+		desc: `Restore radiance`,
+		price: 120,
+		image: Cream,
+		product: ProductMask,
+	},
+	{
+		title: `tallow peptide cloud cream`,
+		desc: `Glow Complexion`,
+		price: 90,
+		image: Cream,
+		product: ProductCleanser,
+	},
+];
+---
+
+<section class="w-full">
+	<div class="outer px-7 py-16">
+		<!-- Upper Copy -->
+		<div class="w-full max-w-3xl mx-auto text-center">
+			<h1 class="heading-1 font-medium uppercase">
+				<span class="font-nantes italic">Daily</span> Essentials
+			</h1>
+			<p class="copy-xl font-nantes mt-6 xl:mt-10">
+				<span>Finest ingredients for</span>
+				<span class="italic">beautiful</span>
+				<span>skin</span>
+			</p>
+			<p class="mt-4 xl:mt-6 copy text-balance">
+				Our skincare essentials are designed to make you look and feel
+				your glowy, dewy best before you even think about makeup.
+			</p>
+		</div>
+		<!-- Cards -->
+		<div class="w-full mt-8 xl:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-2">
+			{
+				cards.map((card) => (
+					<div class="w-full relative group bg-lemongrass text-green hover:text-white rounded-md overflow-hidden">
+						<div class="absolute inset-0 w-full h-full z-0">
+							<Image
+								class="w-full h-full object-cover object-center rounded-md opacity-0 xl:group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
+								src={card.image}
+								alt="Women using cloud cream product on face"
+							/>
+						</div>
+						<figure class="aspect-square lg:aspect-[0.75] w-full relative z-0 flex flex-col max-lg:gap-6 group-hover:bg-transparent transition-colors duration-700">
+							{/* Product */}
+							<div class="w-full flex-1 xl:group-hover:scale-100 xl:scale-110 xl:group-hover:opacity-0 transition-all duration-500">
+								<Image
+									class="w-full h-full object-contain object-center"
+									src={card.product}
+									alt={`${card.desc} product`}
+								/>
+							</div>
+							{/* Info */}
+							<figcaption class="w-full p-6">
+								<div class="w-full xl:translate-y-14 xl:group-hover:translate-y-0 transition-transform duration-500">
+									<h6 class="copy-sm uppercase font-medium leading-none">
+										{card.title}
+									</h6>
+									<div class="flex items-baseline justify-between gap-6 mt-1">
+										<p class="copy-sm italic font-nantes">
+											Gently cleanses oil
+										</p>
+										<p class="copy tracking-[0.02em] leading-none">
+											${card.price}
+										</p>
+									</div>
+								</div>
+								<div class="pt-5 xl:pointer-events-none xl:opacity-0 xl:translate-y-14 xl:group-hover:pointer-events-auto xl:group-hover:opacity-100 xl:group-hover:translate-y-0 transition-all duration-500 group-hover:delay-75">
+									<button class="w-full rounded-full border font-medium text-xs leading-none tracking-[0.07em] text-center uppercase px-6 py-2.5 xl:border-white xl:text-white hover:bg-white hover:text-green transition-colors duration-500 cursor-pointer">
+										add to cart
+									</button>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				))
+			}
+		</div>
+		<!-- CTA -->
+		<div class="w-full mt-8 xl:mt-12 flex justify-center">
+			<a href="./" class="btn">Shop the range</a>
+		</div>
+	</div>
+</section>

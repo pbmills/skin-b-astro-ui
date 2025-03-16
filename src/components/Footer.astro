@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+
+import LogoIcon from "../assets/logos/logo-icon.svg";
+import ArrowRight from "../assets/icons/arrow-right.svg?raw";
+
+const pages = ["SHOP", "about us", "INGREDIENTS", "our farmers", "faq"];
+const links = [
+	"account",
+	"shipping policy",
+	"return policy",
+	"accessibility",
+	"contact us",
+];
+const socials = ["INSTAGRAM", "YOUTUBE", "TIKTOK"];
+---
+
+<footer class="w-full bg-lemongrass">
+	<div
+		class="outer px-7 pb-8 pt-12 grid grid-cols-1 gap-8 xl:grid-cols-7 md:gap-12 lg:gap-20"
+	>
+		<!-- Left -->
+		<div
+			class="w-full flex flex-col-reverse md:flex-row xl:flex-col items-start justify-between gap-8 xl:gap-24 xl:col-span-3"
+		>
+			<div class="w-full max-w-100">
+				<p class="copy-sm uppercase font-medium">NEWSLETTER</p>
+				<h6 class="copy-xl italic font-nantes mt-4 xl:mt-6">
+					Sign up to our newsletter and receive XX off your first SKIN
+					order.
+				</h6>
+				<p class="copy-sm opacity-30 mt-3">
+					By signing up, you agree to our Privacy Policy*.
+				</p>
+				<form action="" class="w-full mt-5 relative max-w-xs">
+					<input
+						type="email"
+						name=""
+						id=""
+						placeholder="your email"
+						class="rounded-full border text-xs font-medium leading-none tracking-[0.07em] placeholder:uppercase py-2 pl-4 placeholder:text-green w-full min-w-0 pr-8"
+					/>
+					<button
+						type="submit"
+						class="absolute top-1/2 right-2 -translate-y-1/2 rounded-full"
+					>
+						<Fragment set:html={ArrowRight} />
+						<span class="sr-only">Sign up</span>
+					</button>
+				</form>
+			</div>
+			<!-- Logo -->
+			<div class="size-25 shrink-0">
+				<Image src={LogoIcon} alt="Skin B Logo Icon" />
+			</div>
+		</div>
+		<!-- Right -->
+		<div
+			class="w-full flex flex-col items-stretch justify-between gap-8 md:gap-12 xl:col-span-4 copy-sm"
+		>
+			<!-- Top -->
+			<div
+				class="w-full grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 uppercase"
+			>
+				<div
+					class="w-full font-medium grid grid-cols-2 md:flex md:flex-col md:items-start gap-6 max-md:col-span-2"
+				>
+					{
+						pages.map((page) => (
+							<a href="./" class="btn-underline">
+								{page}
+							</a>
+						))
+					}
+				</div>
+				<div class="w-full flex flex-col items-start gap-6">
+					{
+						links.map((link) => (
+							<a href="./" class="btn-underline">
+								{link}
+							</a>
+						))
+					}
+				</div>
+				<div class="w-full flex flex-col items-start gap-6">
+					{
+						socials.map((social) => (
+							<a href="./" class="btn-underline">
+								{social}
+							</a>
+						))
+					}
+				</div>
+			</div>
+			<!-- Bottom -->
+			<div class="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
+				<a href="./">Privacy Policy</a>
+				<a href="./">Terms of use</a>
+				<a
+					href="./"
+					x-data="{ year: new Date().getFullYear() }"
+					class="max-md:col-span-2"
+					>&copy; <span x-text="year"></span> SKIN All right reserved</a
+				>
+			</div>
+		</div>
+	</div>
+</footer>

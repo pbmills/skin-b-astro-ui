@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+
+import Waves from "../assets/images/waves.png";
+import Ripple from "../assets/images/ripple.png";
+import Serum from "../assets/images/serum.png";
+import Freckles from "../assets/images/freckles.png";
+---
+
+<section class="w-full">
+	<div class="outer px-7 py-16">
+		<!-- Top Image -->
+		<div
+			class="w-full relative z-0 md:-mb-[8%] xl:-mb-[30%] max-md:hidden max-md:invisible"
+		>
+			<div
+				class="w-1/2 md:w-1/3 aspect-[0.75] ml-auto rounded-md overflow-hidden"
+			>
+				<Image
+					class="w-full h-full object-cover object-center"
+					src={Ripple}
+					alt="Ripple in green water"
+				/>
+			</div>
+		</div>
+		<!-- Text -->
+		<div class="relative z-10 text-center mx-auto max-w-xl">
+			<p class="copy-sm uppercase font-medium">our philosophy</p>
+			<h1
+				class="heading-1 text-balance uppercase font-semibold mt-6 xl:mt-10"
+			>
+				the <span class="font-nantes italic font-normal">best</span> version
+				of yourself
+			</h1>
+			<p class="copy max-w-md mx-auto w-full mt-4 xl:mt-6">
+				We believe the most powerful resource is you, SKIN empowers
+				people to take ownership of their minds and body. <br /><br />We
+				have the foundation that makes you shine, look, and feel good.
+				You are the energy that inspires us, and you will inspire people
+				around you.
+			</p>
+			<div class="flex justify-center mt-10 xl:mt-15">
+				<a href="./" class="btn">About us</a>
+			</div>
+		</div>
+		<!-- Middle Images -->
+		<div
+			class="w-full md:w-[48%] relative z-0 mt-4 md:-mt-[10%] xl:-mt-[23%]"
+		>
+			<div
+				class="w-1/2 aspect-[0.75] ml-7 rounded-md overflow-hidden -mb-[30%] relative z-10"
+			>
+				<Image
+					class="w-full h-full object-cover object-center"
+					src={Freckles}
+					alt="Women with freckles on face"
+				/>
+			</div>
+			<div
+				class="w-full aspect-[1.5] ml-auto rounded-md overflow-hidden relative z-0"
+			>
+				<Image
+					class="w-full h-full object-cover object-center"
+					src={Waves}
+					alt="Waves in shiny surface"
+				/>
+			</div>
+		</div>
+		<!-- Bottom Image -->
+		<div class="w-full relative z-0 flex justify-center mt-6">
+			<div
+				class="w-full md:w-1/2 max-w-xl aspect-[1.5] rounded-md overflow-hidden relative z-0 md:translate-x-1/4"
+			>
+				<Image
+					class="w-full h-full object-cover object-center"
+					src={Serum}
+					alt="Serum product"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
